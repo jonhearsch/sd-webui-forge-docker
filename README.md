@@ -1,19 +1,16 @@
 # sd-webui-forge-docker
 
-Auto-built Docker image for [SD WebUI Forge Classic (Neo)](https://github.com/Haoming02/sd-webui-forge-classic/tree/neo), targeting NVIDIA GPUs (CUDA 12.6 / RTX 3060).
+Auto-built Docker image for [SD WebUI Forge Classic (Neo)](https://github.com/Haoming02/sd-webui-forge-classic/tree/neo), targeting NVIDIA GPUs (CUDA 12.6).
 
-Nightly GitHub Actions checks for new upstream releases and rebuilds + pushes to `ghcr.io/jonhearsch/sd-webui-forge` if there's anything new. Watchtower on Unraid picks it up automatically.
+Nightly GitHub Actions checks for new upstream releases and rebuilds + pushes to `ghcr.io/jonhearsch/sd-webui-forge` if there's anything new.
 
-## Unraid setup
-
-**Prerequisites:** Nvidia GPU plugin installed via Community Apps.
+## Quick start
 
 ```bash
-mkdir -p /mnt/user/appdata/sd-webui-forge/{models,output,extensions,config}
 docker compose up -d
 ```
 
-Open: `http://UNRAID-IP:7860`
+Open: `http://localhost:7860`
 
 First run will install remaining Python deps — takes a few minutes. Subsequent starts are fast.
 
